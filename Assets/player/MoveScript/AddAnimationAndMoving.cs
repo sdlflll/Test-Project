@@ -105,11 +105,11 @@ public class AddAnimationAndMoving : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            _nowSpeed = 0.6f;
+            _nowSpeed = 0.45f;
 
         }
         else { 
-            _nowSpeed = 0.6f;
+            _nowSpeed = 0.45f;
         }
         if (_moveDirection.magnitude == 0){
             _nowSpeed = 0;
