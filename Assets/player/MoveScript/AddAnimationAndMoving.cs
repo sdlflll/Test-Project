@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class AddAnimationAndMoving : MonoBehaviour
 {
+    //префаб
 
 
     //переменные 
