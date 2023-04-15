@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 12784346}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cf3910b7639e12447827e45f63f60201, type: 3}
-  m_Controller: {fileID: 9100000, guid: d0d7f675dfa9ac14f8c07b65870caac8, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -6872,7 +6872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032259928157829241, guid: 28e739c9d9aeccf459448f0acf99c123, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5166609
+      value: -1.565
       objectReference: {fileID: 0}
     - target: {fileID: 2032259928157829241, guid: 28e739c9d9aeccf459448f0acf99c123, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19191,7 +19191,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh253974
+  m_Name: pb_Mesh51324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20619,6 +20619,22 @@ PrefabInstance:
     - target: {fileID: 5648093743795509349, guid: 98e3e57b89cde2748ba392f3035ae169, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648093743795509349, guid: 98e3e57b89cde2748ba392f3035ae169, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648093743795509349, guid: 98e3e57b89cde2748ba392f3035ae169, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.9680033
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648093743795509349, guid: 98e3e57b89cde2748ba392f3035ae169, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648093743795509349, guid: 98e3e57b89cde2748ba392f3035ae169, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98e3e57b89cde2748ba392f3035ae169, type: 3}
