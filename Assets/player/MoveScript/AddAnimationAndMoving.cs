@@ -52,10 +52,9 @@ public class AddAnimationAndMoving : MonoBehaviour
         _animator = GetComponent<Animator>();
         _cc = GetComponent<CharacterController>();
         _camera = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked;
-        Vector3 CharecterCenter = new Vector3(0, 0.9f, 0);
-        float CharacterRadius = 0.42f;
-        float HeightOfCharacter = 1.74f;
+        Vector3 CharecterCenter = new Vector3(0, 0.8f, 0);
+        float CharacterRadius = 0.23f;
+        float HeightOfCharacter = 1.31f;
 
         _cc.center = CharecterCenter;
         _cc.radius = CharacterRadius;

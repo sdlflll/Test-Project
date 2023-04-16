@@ -7,15 +7,12 @@ public class MoveScriptAdder : MonoBehaviour
     private AddAnimationAndMoving _moving;
     void Start()
     {
-       
-       StartCoroutine(AddScript(18));
+        _moving = GetComponent<AddAnimationAndMoving>();
     }
 
-    private IEnumerator AddScript (float delay)
+    // Update is called once per frame
+    public void EnableMoving()
     {
-        yield return new WaitForSeconds(delay);
-        gameObject.AddComponent<AddAnimationAndMoving>();
+        _moving.enabled = true;
     }
-
-    // pdate is called once per frame
 }
