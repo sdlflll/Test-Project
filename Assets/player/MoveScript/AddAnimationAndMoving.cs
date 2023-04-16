@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using AnimatorController = UnityEditor.Animations.AnimatorController;
 
 public class AddAnimationAndMoving : MonoBehaviour
 {
     //префаб
-
-
     //переменные 
     //поля анимации
     //   [SerializeField] private float _moveAnimationSwitcher = 0;
 
-    private Animator _animator;
+    [SerializeField] private Animator _animator;
+
+    [SerializeField] private AnimatorController _animation;
+    [SerializeField] private Avatar _avatar;
 
     private Vector2 _animDirection;
 
@@ -20,7 +24,7 @@ public class AddAnimationAndMoving : MonoBehaviour
 
     private Camera _camera;
     //поворот
-    [SerializeField] private float _speedRot = 300;
+    [SerializeField] private float _speedRot = 350;
 
     //движение
 
@@ -43,10 +47,24 @@ public class AddAnimationAndMoving : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.AddComponent<Animator>();
+        gameObject.AddComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         _cc = GetComponent<CharacterController>();
         _camera = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
+        Vector3 CharecterCenter = new Vector3(0, 0.9f, 0);
+        float CharacterRadius = 0.42f;
+        float HeightOfCharacter = 1.74f;
+
+        _cc.center = CharecterCenter;
+        _cc.radius = CharacterRadius;
+        _cc.height = HeightOfCharacter;
+        _animator.runtimeAnimatorController = _animation;
+        _animator.avatar = _avatar;
+
+
+
     }
 
     // Update is called once per frame
