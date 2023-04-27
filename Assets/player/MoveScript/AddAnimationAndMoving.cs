@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using AnimatorController = UnityEditor.Animations.AnimatorController;
 
 public class AddAnimationAndMoving : MonoBehaviour
 {
