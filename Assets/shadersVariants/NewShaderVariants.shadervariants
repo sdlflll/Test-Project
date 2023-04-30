@@ -1,0 +1,362 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NewShaderVariants
+  m_Shaders:
+  - first: {fileID: 75, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 12
+  - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _EMISSION _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+          _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+          _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: INSTANCING_ON LIGHTPROBE_SH VERTEXLIGHT_ON _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _ALPHATEST_ON _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _EMISSION _NORMALMAP _SPECGLOSSMAP
+        passType: 4
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+          _SPECGLOSSMAP
+        passType: 4
+      - keywords: DIRECTIONAL _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SPECGLOSSMAP
+        passType: 5
+      - keywords: DIRECTIONAL _NORMALMAP _SPECGLOSSMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH SHADOWS_SOFT SPOT _ALPHATEST_ON _NORMALMAP _SPECGLOSSMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH SHADOWS_SOFT SPOT _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+          _SPECGLOSSMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH SHADOWS_SOFT SPOT _NORMALMAP _SPECGLOSSMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT _ALPHATEST_ON _NORMALMAP _SPECGLOSSMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+          _SPECGLOSSMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT _NORMALMAP _SPECGLOSSMAP
+        passType: 5
+      - keywords: SPOT _ALPHATEST_ON _NORMALMAP _SPECGLOSSMAP
+        passType: 5
+      - keywords: SPOT _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SPECGLOSSMAP
+        passType: 5
+      - keywords: SPOT _NORMALMAP _SPECGLOSSMAP
+        passType: 5
+      - keywords: INSTANCING_ON SHADOWS_DEPTH _ALPHATEST_ON _SPECGLOSSMAP
+        passType: 8
+      - keywords: INSTANCING_ON SHADOWS_DEPTH _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+          _SPECGLOSSMAP
+        passType: 8
+      - keywords: INSTANCING_ON SHADOWS_DEPTH _SPECGLOSSMAP
+        passType: 8
+      - keywords: SHADOWS_DEPTH _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SPECGLOSSMAP
+        passType: 8
+      - keywords: SHADOWS_DEPTH _SPECGLOSSMAP
+        passType: 8
+  - first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH VERTEXLIGHT_ON _ALPHAPREMULTIPLY_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH VERTEXLIGHT_ON _ALPHATEST_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHAPREMULTIPLY_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHAPREMULTIPLY_ON _EMISSION
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHATEST_ON
+        passType: 4
+      - keywords: LIGHTPROBE_SH
+        passType: 4
+      - keywords: LIGHTPROBE_SH VERTEXLIGHT_ON
+        passType: 4
+      - keywords: 
+        passType: 5
+      - keywords: DIRECTIONAL
+        passType: 5
+      - keywords: SHADOWS_DEPTH SHADOWS_SOFT SPOT
+        passType: 5
+      - keywords: SHADOWS_DEPTH SHADOWS_SOFT SPOT _ALPHATEST_ON
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT _ALPHATEST_ON
+        passType: 5
+      - keywords: SPOT
+        passType: 5
+      - keywords: SPOT _ALPHAPREMULTIPLY_ON
+        passType: 5
+      - keywords: SPOT _ALPHATEST_ON
+        passType: 5
+      - keywords: INSTANCING_ON SHADOWS_DEPTH _ALPHATEST_ON
+        passType: 8
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON
+        passType: 8
+      - keywords: SHADOWS_DEPTH _ALPHATEST_ON
+        passType: 8
+      - keywords: 
+        passType: 10
+      - keywords: 
+        passType: 11
+  - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: _SUNDISK_SIMPLE
+        passType: 0
+  - first: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: SOFTPARTICLES_ON
+        passType: 0
+  - first: {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: DIRECTIONAL LIGHTPROBE_SH VERTEXLIGHT_ON _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHABLEND_ON _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL SOFTPARTICLES_ON _ALPHABLEND_ON _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL SOFTPARTICLES_ON _NORMALMAP
+        passType: 4
+      - keywords: LIGHTPROBE_SH SOFTPARTICLES_ON VERTEXLIGHT_ON _ALPHABLEND_ON _EMISSION
+          _FADING_ON _REQUIRE_UV2
+        passType: 4
+      - keywords: LIGHTPROBE_SH SOFTPARTICLES_ON _ALPHABLEND_ON _EMISSION _FADING_ON
+          _REQUIRE_UV2
+        passType: 4
+      - keywords: LIGHTPROBE_SH VERTEXLIGHT_ON _ALPHABLEND_ON _EMISSION _FADING_ON
+          _REQUIRE_UV2
+        passType: 4
+      - keywords: LIGHTPROBE_SH _ALPHABLEND_ON _EMISSION _FADING_ON _REQUIRE_UV2
+        passType: 4
+      - keywords: PROCEDURAL_INSTANCING_ON _ALPHABLEND_ON
+        passType: 8
+      - keywords: PROCEDURAL_INSTANCING_ON _ALPHABLEND_ON _REQUIRE_UV2
+        passType: 8
+      - keywords: SHADOWS_DEPTH _ALPHABLEND_ON
+        passType: 8
+      - keywords: SOFTPARTICLES_ON _ALPHABLEND_ON _NORMALMAP
+        passType: 10
+      - keywords: SOFTPARTICLES_ON _NORMALMAP
+        passType: 10
+      - keywords: 
+        passType: 13
+      - keywords: _REQUIRE_UV2
+        passType: 13
+  - first: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: EFFECT_BUMP SOFTPARTICLES_ON _ALPHABLEND_ON _EMISSION _FADING_ON
+          _NORMALMAP _REQUIRE_UV2
+        passType: 0
+      - keywords: EFFECT_BUMP _ALPHABLEND_ON _EMISSION _FADING_ON _NORMALMAP _REQUIRE_UV2
+        passType: 0
+      - keywords: SOFTPARTICLES_ON _ALPHABLEND_ON
+        passType: 0
+      - keywords: _ALPHABLEND_ON
+        passType: 0
+      - keywords: PROCEDURAL_INSTANCING_ON SHADOWS_DEPTH _ALPHABLEND_ON
+        passType: 8
+      - keywords: PROCEDURAL_INSTANCING_ON SHADOWS_DEPTH _ALPHABLEND_ON _REQUIRE_UV2
+        passType: 8
+      - keywords: SHADOWS_DEPTH _ALPHABLEND_ON
+        passType: 8
+      - keywords: 
+        passType: 13
+      - keywords: _REQUIRE_UV2
+        passType: 13
+  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 1ccecd9b89b8a4f14bfb64f29ddfcc81, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: LIGHTPROBE_SH
+        passType: 4
+      - keywords: LIGHTPROBE_SH VERTEXLIGHT_ON
+        passType: 4
+      - keywords: DIRECTIONAL
+        passType: 5
+      - keywords: SHADOWS_DEPTH SHADOWS_SOFT SPOT
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT
+        passType: 5
+      - keywords: SPOT
+        passType: 5
+  - first: {fileID: 4800000, guid: c84d57d423a2042eb92da86f9fa670a3, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0b65beeff2abd8f49a7633b323425f2c, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT
+        passType: 5
+      - keywords: SPOT
+        passType: 5
+      - keywords: 
+        passType: 8
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 4800000, guid: c1e1d3119c6fd4646aea0b4b74cacc1a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: cdbdb71de5f9c454b980f6d0e87f0afb, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 4bf4cff0d0bac3d43894e2e8839feb40, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 2c459b89a7c8b1a4fbefe0d81341651c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 382151503e2a43a4ebb7366d1632731d, type: 3}
+    second:
+      variants:
+      - keywords: BLOOM COLOR_GRADING_HDR_3D DISTORT FINALPASS VIGNETTE
+        passType: 0
+  - first: {fileID: 4800000, guid: 67f9497810829eb4791ec19e95781e51, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 4293210a3280c4283b9872316017f1f9, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: de7f3ac52268a194383c7d62c2a343c1, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: a86da79cce638b74e87c1851fe2661c7, type: 3}
+    second:
+      variants:
+      - keywords: HEIGHT_FOG SHADOWS_DEPTH SPOT
+        passType: 0
+      - keywords: HEIGHT_FOG SPOT
+        passType: 0
+      - keywords: SHADOWS_DEPTH SPOT
+        passType: 0
+  - first: {fileID: 4800000, guid: 5bb6ef6f3e1b20348b4fdb01e4c404e2, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: bb4e6e1e594a735429e14a61fde8178d, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 88277e7e45f3bf04cabda24c78aacc7d, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 6f37d9e45fbae41b386f76d3bfefec4a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 8ca8b34aa013842f3b399b6961e7dc3b, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
