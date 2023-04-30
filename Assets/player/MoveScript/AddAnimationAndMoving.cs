@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
-using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using AnimatorController = UnityEditor.Animations.AnimatorController;
+
 
 public class AddAnimationAndMoving : MonoBehaviour
 {
@@ -15,7 +10,7 @@ public class AddAnimationAndMoving : MonoBehaviour
 
     [SerializeField] private Animator _animator;
 
-    [SerializeField] private AnimatorController _animation;
+    [SerializeField] private RuntimeAnimatorController _animation;
     [SerializeField] private Avatar _avatar;
 
     private Vector2 _animDirection;
