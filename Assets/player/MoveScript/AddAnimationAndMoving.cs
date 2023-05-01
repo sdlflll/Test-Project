@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+using UnityEngine;
+
+=======
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using AnimatorController = UnityEditor.Animations.AnimatorController;
+>>>>>>> parent of ce41d52 (no message)
 
 public class AddAnimationAndMoving : MonoBehaviour
 {
@@ -13,7 +20,7 @@ public class AddAnimationAndMoving : MonoBehaviour
 
     [SerializeField] private Animator _animator;
 
-    [SerializeField] private AnimatorController _animation;
+    [SerializeField] private RuntimeAnimatorController _animation;
     [SerializeField] private Avatar _avatar;
 
     private Vector2 _animDirection;
@@ -121,11 +128,11 @@ public class AddAnimationAndMoving : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            _nowSpeed = 0.45f;
+            _nowSpeed = 0.75f;
 
         }
         else { 
-            _nowSpeed = 0.45f;
+            _nowSpeed = 0.75f;
         }
         if (_moveDirection.magnitude == 0){
             _nowSpeed = 0;
