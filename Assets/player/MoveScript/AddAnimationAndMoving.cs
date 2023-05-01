@@ -1,15 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 using UnityEngine;
 
 =======
+=======
+>>>>>>> origin/main
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.EventSystems;
+<<<<<<< HEAD
 using AnimatorController = UnityEditor.Animations.AnimatorController;
 >>>>>>> parent of ce41d52 (no message)
+=======
+=======
+using UnityEngine;
+
+>>>>>>> origin/main
+>>>>>>> origin/main
 
 public class AddAnimationAndMoving : MonoBehaviour
 {

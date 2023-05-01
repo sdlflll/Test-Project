@@ -723,12 +723,19 @@ Texture2D:
   m_Width: 0
   m_Height: 0
   m_CompleteImageSize: 0
+<<<<<<< HEAD
 =======
   m_Width: 512
   m_Height: 512
   m_CompleteImageSize: 262144
   m_MipsStripped: 0
 >>>>>>> parent of dd8c8df (no message)
+=======
+<<<<<<< HEAD
+  m_MipsStripped: 0
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
   m_TextureFormat: 1
   m_MipCount: 1
   m_IsReadable: 1
@@ -748,6 +755,12 @@ Texture2D:
   m_LightmapFormat: 0
   m_ColorSpace: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  m_PlatformBlob: 
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
   image data: 0
   _typelessdata: 
 =======
