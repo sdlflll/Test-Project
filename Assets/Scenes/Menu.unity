@@ -22996,12 +22996,15 @@ GameObject:
     m_TransformParent: {fileID: 0}
     m_Modifications:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     - target: {fileID: 3572328323657884635, guid: 2bfe2e8133790884798f3d4c29617439, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.638
       objectReference: {fileID: 0}
 >>>>>>> origin/main
+=======
+>>>>>>> parent of ce41d52 (no message)
     - target: {fileID: 4806071671835401130, guid: 2bfe2e8133790884798f3d4c29617439, type: 3}
       propertyPath: m_Name
       value: SFM_Standing_Screen (1)

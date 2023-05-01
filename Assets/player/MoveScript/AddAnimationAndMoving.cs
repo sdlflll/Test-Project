@@ -12,6 +12,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.EventSystems;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using AnimatorController = UnityEditor.Animations.AnimatorController;
 >>>>>>> parent of ce41d52 (no message)
 =======
@@ -20,6 +21,9 @@ using UnityEngine;
 
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+using AnimatorController = UnityEditor.Animations.AnimatorController;
+>>>>>>> parent of ce41d52 (no message)
 
 public class AddAnimationAndMoving : MonoBehaviour
 {
