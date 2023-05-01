@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
+=======
+using UnityEngine;
+
+>>>>>>> origin/main
 
 public class AddAnimationAndMoving : MonoBehaviour
 {
@@ -13,7 +18,7 @@ public class AddAnimationAndMoving : MonoBehaviour
 
     [SerializeField] private Animator _animator;
 
-    [SerializeField] private AnimatorController _animation;
+    [SerializeField] private RuntimeAnimatorController _animation;
     [SerializeField] private Avatar _avatar;
 
     private Vector2 _animDirection;
@@ -121,11 +126,11 @@ public class AddAnimationAndMoving : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            _nowSpeed = 0.45f;
+            _nowSpeed = 0.75f;
 
         }
         else { 
-            _nowSpeed = 0.45f;
+            _nowSpeed = 0.75f;
         }
         if (_moveDirection.magnitude == 0){
             _nowSpeed = 0;
