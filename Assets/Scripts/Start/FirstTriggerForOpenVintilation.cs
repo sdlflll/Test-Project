@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using DG.Tweening;
 
 public class FirstTriggerForOpenVintilation : MonoBehaviour
 {
+    [SerializeField] private AudioSource _audioForCutScene;
     [SerializeField] private GameObject _border;
     [SerializeField] private GameObject _text;
     [SerializeField] private GameObject _sizer;
@@ -20,12 +22,14 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
     [SerializeField] private PlayableDirector _doorTimeline;
     public bool _timeLinePlayed;
     public bool _isLerp;
+    private float _t;
 
     void Start()
     {
         _border.SetActive(false);
         _sizer.SetActive(false);
         _text.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -50,8 +54,8 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
             _playerPosition = _player.transform.position;
             _player.GetComponent<CharacterController>().enabled = false;
             _player.GetComponent<AddAnimationAndMoving>().enabled = false;
-            _player.transform.localEulerAngles = Vector3.Lerp(_playerRotation, _nextPlayerRotation, 500);
-            _player.transform.localPosition = Vector3.Lerp(_playerPosition, _nextPlayerPosition, 500);
+            _player.transform.DOMove(_nextPlayerPosition, 1);
+            _player.transform.DORotate(_nextPlayerRotation, 1);
             _isPosMoved = true;
             _isRotMoved = true;
 
