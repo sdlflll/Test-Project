@@ -1,6 +1,4 @@
 using UnityEngine;
-
-
 public class AddAnimationAndMoving : MonoBehaviour
 {
     //префаб
@@ -47,7 +45,7 @@ public class AddAnimationAndMoving : MonoBehaviour
         _animator = GetComponent<Animator>();
         _cc = GetComponent<CharacterController>();
         _camera = Camera.main;
-        Vector3 CharecterCenter = new Vector3(0, 0.8f, 0);
+        Vector3 CharecterCenter = new Vector3(0, 0.88f, 0);
         float CharacterRadius = 0.23f;
         float HeightOfCharacter = 1.31f;
 
