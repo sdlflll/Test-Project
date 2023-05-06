@@ -14,15 +14,16 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
     private Vector3 _nextPlayerRotation = new Vector3(0, 0, 0 );
     private Vector3 _nextPlayerPosition = new Vector3(4.5f, 0.91f, 3.1f);
     private bool _inTrigger = false;
-    public float FillerSupport = 1; 
-    public float filler = 0;
-    public float fillerEnd;
-    public bool _isPosMoved;
-     public bool _isRotMoved;
+    private float _fillerSupport = 1;
+    private float _filler = 0;
+    private float _fillerEnd;
+    private bool _isPosMoved;
+    private bool _isRotMoved;
     [SerializeField] private PlayableDirector _doorTimeline;
-    public bool _timeLinePlayed;
-    public bool _isLerp;
+    private bool _timeLinePlayed;
+    private bool _isLerp;
     private float _t;
+    public bool ConfirmToVentilation;
 
     void Start()
     {
@@ -35,19 +36,19 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E) && _inTrigger == true && fillerEnd < 0.1)
+        if (Input.GetKey(KeyCode.E) && _inTrigger == true && _fillerEnd < 0.1)
         {
 
-            filler += FillerSupport * Time.deltaTime;
+            _filler += _fillerSupport * Time.deltaTime;
 
-            fillerEnd = filler / 20;
+            _fillerEnd = _filler / 20;
 
-            _sizer.transform.localScale = new Vector3(fillerEnd, fillerEnd, fillerEnd);
+            _sizer.transform.localScale = new Vector3(_fillerEnd, _fillerEnd, _fillerEnd);
 
             _isLerp = true;
         }
 
-        else if (fillerEnd >= 0.1f && _isLerp == true)
+        else if (_fillerEnd >= 0.1f && _isLerp == true)
         {
             Quaternion rotationQuaternionPlayer = _player.transform.rotation;
             _playerRotation = rotationQuaternionPlayer.eulerAngles;
@@ -61,7 +62,7 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
 
             _isLerp = false;
         }
-        else if(fillerEnd >= 0.1f)
+        else if(_fillerEnd >= 0.1f)
         {
             _text.SetActive(false);
             _border.SetActive(false);
@@ -82,7 +83,8 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
     }
     public void DoorCutSceneEnd ()
     {
-            _doorTimeline.Stop();  
+            _doorTimeline.Stop();
+        ConfirmToVentilation = true;
     }
     public void SwitchOn()
     {
@@ -91,6 +93,7 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        
         _inTrigger = true;
         _border.SetActive(true);
         _sizer.SetActive(true);
@@ -103,8 +106,10 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
         _sizer.SetActive(false);
         _text.SetActive(false) ;
         _sizer.transform.localScale = new Vector3(0, 0, 0);
-        fillerEnd = 0;
-        filler = 0;
-        FillerSupport = 1;
+        _fillerEnd = 0;
+        _filler = 0;
+        _fillerSupport = 1;
     }
 }
+
+//Vector3(1.61800003,0.0500000007,1.4776839)
