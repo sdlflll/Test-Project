@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -10,6 +11,7 @@ public class JumpInVentilation : MonoBehaviour
     [SerializeField] private GameObject _text;
     [SerializeField] private GameObject _sizer;
     [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _activateVentilationCheckText;
     private Vector3 _playerPosition;
     private Vector3 _playerRotation;
     private Vector3 _nextPlayerRotation = new Vector3(0, 180, 0);
@@ -25,6 +27,9 @@ public class JumpInVentilation : MonoBehaviour
     public bool _isLerp;
     private float _t;
     private FirstTriggerForOpenVintilation _firstTriggerForOpenVintilation;
+    public TextMeshProUGUI ActivateVentilationCheckTextColor;
+    private float _transperent = 0;
+
 
     void Start()
     {
@@ -32,14 +37,15 @@ public class JumpInVentilation : MonoBehaviour
         _border.SetActive(false);
         _sizer.SetActive(false);
         _text.SetActive(false);
-        
+        ActivateVentilationCheckTextColor = ActivateVentilationCheckTextColor.GetComponent<TextMeshProUGUI>();
+        ActivateVentilationCheckTextColor.color = new Color(0.6603774f, 0.6603774f, 0.6603774f, 0);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_firstTriggerForOpenVintilation == true)
+        if(_firstTriggerForOpenVintilation.ConfirmToVentilation == true)
         {
             if (Input.GetKey(KeyCode.E) && _inTrigger == true && fillerEnd < 0.1)
             {
@@ -74,6 +80,13 @@ public class JumpInVentilation : MonoBehaviour
                 _sizer.SetActive(false);
             }
             DoorCutScenePlay();
+            if (_timeLinePlayed == true)
+            {
+                _activateVentilationCheckText.SetActive(true);
+                float timeForTransperent = Time.deltaTime * 0.4f;
+                _transperent += timeForTransperent;
+                ActivateVentilationCheckTextColor.color = new Color(0.6603774f, 0.6603774f, 0.6603774f, _transperent);
+            }
         }
         
 
@@ -99,20 +112,26 @@ public class JumpInVentilation : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        _inTrigger = true;
-        _border.SetActive(true);
-        _sizer.SetActive(true);
-        _text.SetActive(true);
+        if (_firstTriggerForOpenVintilation.ConfirmToVentilation == true)
+        {
+            _inTrigger = true;
+            _border.SetActive(true);
+            _sizer.SetActive(true);
+            _text.SetActive(true);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        _inTrigger = false;
-        _border.SetActive(false);
-        _sizer.SetActive(false);
-        _text.SetActive(false);
-        _sizer.transform.localScale = new Vector3(0, 0, 0);
-        fillerEnd = 0;
-        filler = 0;
-        FillerSupport = 1;
+        if (_firstTriggerForOpenVintilation.ConfirmToVentilation == true)
+        {
+            _inTrigger = false;
+            _border.SetActive(false);
+            _sizer.SetActive(false);
+            _text.SetActive(false);
+            _sizer.transform.localScale = new Vector3(0, 0, 0);
+            fillerEnd = 0;
+            filler = 0;
+            FillerSupport = 1;
+        }
     }
 }

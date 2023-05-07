@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using DG.Tweening;
+using TMPro;
 
 public class FirstTriggerForOpenVintilation : MonoBehaviour
 {
-    [SerializeField] private AudioSource _audioForCutScene;
     [SerializeField] private GameObject _border;
     [SerializeField] private GameObject _text;
     [SerializeField] private GameObject _sizer;
     [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _activateDoorCheckText;
     private Vector3 _playerPosition;
     private Vector3 _playerRotation;
     private Vector3 _nextPlayerRotation = new Vector3(0, 0, 0 );
@@ -24,13 +25,19 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
     private bool _isLerp;
     private float _t;
     public bool ConfirmToVentilation;
+    public TextMeshProUGUI ActivateDoorCheckTextColor;
+    private float _transperent = 0;
 
     void Start()
     {
         _border.SetActive(false);
         _sizer.SetActive(false);
         _text.SetActive(false);
-        
+
+        ActivateDoorCheckTextColor = _activateDoorCheckText.GetComponent<TextMeshProUGUI>();
+        ActivateDoorCheckTextColor.color = new Color(0.6603774f, 0.6603774f, 0.6603774f, 0);
+
+
     }
 
     // Update is called once per frame
@@ -69,7 +76,13 @@ public class FirstTriggerForOpenVintilation : MonoBehaviour
             _sizer.SetActive(false);
         }
         DoorCutScenePlay();
-
+        if (_timeLinePlayed == true)
+        {
+            _activateDoorCheckText.SetActive(true);
+            float timeForTransperent = Time.deltaTime * 0.4f;
+            _transperent += timeForTransperent;
+            ActivateDoorCheckTextColor.color = new Color(0.6603774f, 0.6603774f, 0.6603774f, _transperent);
+        }
     }
     public void DoorCutScenePlay ()
     {
