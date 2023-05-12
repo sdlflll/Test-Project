@@ -4,6 +4,6 @@ using UnityEngine;
 
 abstract class CameraPositionMenegment : MonoBehaviour
 {
-    public abstract void SetNewCameraPosition(Vector3 NewCameraPosition, GameObject NowCamera);
+    public abstract void SetNewCameraPosition(Vector3 NewCameraPosition);
 
 }

@@ -1,10 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
+    public void StartToGameCutScene (PlayableDirector ToGameCS)
+    {
+        ToGameCS.Play();
+    }
    public void SceneSwitcher (int SceneId)
     {
         SceneManager.LoadScene(SceneId);
