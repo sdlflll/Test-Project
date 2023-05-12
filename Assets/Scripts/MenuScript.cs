@@ -13,4 +13,8 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneId);
     }
+    public void AntiAliasing (Camera camera)
+    {
+        camera.allowMSAA = true;
+    }
 }
