@@ -1,3 +1,4 @@
+using Cinemachine;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -133,5 +134,9 @@ public class JumpInVentilation : MonoBehaviour
             filler = 0;
             FillerSupport = 1;
         }
+    }
+    public void NewCameraPositionAfterCutscene(CinemachineFreeLook FreeLook)
+    {
+        FreeLook.transform.localPosition = new Vector3(-6.26999998f, 1.59000003f, -10.4300003f);
     }
 }
