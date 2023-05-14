@@ -17,4 +17,9 @@ public class MenuScript : MonoBehaviour
     {
         camera.allowMSAA = true;
     }
+    public void Quit ()
+    {
+        Application.Quit();
+        print("выход");
+    }
 }
