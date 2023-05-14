@@ -32,6 +32,7 @@ public class TextAnimation : MonoBehaviour
     public void EndDialogue ()
     {
         _textInput.text = "";
+        DialoguePanel.SetActive(false);
     }
     // Update is called once per frame
     void Update()
