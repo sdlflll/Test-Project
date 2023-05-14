@@ -137,6 +137,6 @@ public class JumpInVentilation : MonoBehaviour
     }
     public void NewCameraPositionAfterCutscene(CinemachineFreeLook FreeLook)
     {
-        FreeLook.transform.localPosition = new Vector3(-6.26999998f, 1.59000003f, -10.4300003f);
+        FreeLook.transform.localPosition = new Vector3(2.21600008f, 1.89699996f, -4.29199982f);
     }
 }

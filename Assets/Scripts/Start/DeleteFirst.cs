@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class DeleteFirst : MonoBehaviour
 {
+   
+
+    
    public void DeleteFirstLocation (GameObject First)
     {
         First.SetActive (false);
+        
     }
 }
