@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -42,5 +40,10 @@ public class Scan : MonoBehaviour
     public void ToScaner ()
     {
         ToScan = true;
+    }
+
+    public void TogglePost(PostProcessProfile NewProfile)
+    {
+        _post.profile = NewProfile;
     }
 }
