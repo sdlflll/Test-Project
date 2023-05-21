@@ -6,7 +6,7 @@ public class Scan : MonoBehaviour
     [SerializeField] private PostProcessProfile _profile;
     [SerializeField] private PostProcessProfile _backProfile;
     [SerializeField] private GameObject _postObject;
-    private bool Scaner;
+    public bool Scaner;
     private PostProcessVolume _post;
     public bool ToScan;
     private GameObject[] sprites;
@@ -27,14 +27,12 @@ public class Scan : MonoBehaviour
                 _post.profile = _profile;
                 Scaner = true;
                 Time.timeScale = 0.1f;
-                ScanActive = true;
             }
-            else if (Input.GetKeyDown(KeyCode.T) && Scaner == true)
+            else if (Input.GetKeyDown(KeyCode.T) && Scaner == true )
             {
                 _post.profile = _backProfile;
                 Scaner = false;
                 Time.timeScale = 1;
-                ScanActive = false;
             }
         }
     }

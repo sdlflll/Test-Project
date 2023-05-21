@@ -15,7 +15,7 @@ public class SkipCutScene : MonoBehaviour
       
         if (Input.GetKey(KeyCode.E))
         {
-            director.GetComponent<PlayableDirector>().time += Time.deltaTime;
+            director.GetComponent<PlayableDirector>().time += Time.deltaTime * 7;
         }
     }
 }

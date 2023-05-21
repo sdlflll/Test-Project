@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Scan
   - Scan2
+  - Complite
   layers:
   - Default
   - TransparentFX

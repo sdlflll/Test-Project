@@ -26,7 +26,7 @@ public class SecondLocatiobScan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _toScaner = _scan.ScanActive;
+        _toScaner = _scan.Scaner;
         if (_toScaner == true &&_scaned == false)
         {
             _getElements = false;
@@ -38,7 +38,9 @@ public class SecondLocatiobScan : MonoBehaviour
            
             ToRun();
             ToJump();
-     
+            QEErrorKiller();
+
+
 
         }
         else
@@ -61,25 +63,16 @@ public class SecondLocatiobScan : MonoBehaviour
         {
             _getElements = false;
             _getRun = true;
+            _scan.ScanActive = false;
             _triggerForRunAndJump.SetActive(true);
             if (_getElements == false)
             {
                 foreach (var scan in GameObject.FindGameObjectsWithTag("Scan2"))
                 {
-                    if (scan.TryGetComponent(out SpriteRenderer spriteRenderer))
-                    {
-                        spriteRenderer.enabled = false;
-
-                    }
-                    else if (scan.TryGetComponent(out MeshRenderer MeshRenderer))
-                    {
-                        MeshRenderer.enabled = false;
-
-                    }
-
-                    _getElements = true;
+                    scan.SetActive(false);
                 }
             }
+          
         }
         else
         {
@@ -100,22 +93,12 @@ public class SecondLocatiobScan : MonoBehaviour
             _getElements = false;
             _getJump = true;
             _triggerForRunAndJump.SetActive(true);
+            _scan.ScanActive = false;
             if (_getElements == false)
             {
                 foreach (var scan in GameObject.FindGameObjectsWithTag("Scan2"))
                 {
-                    if (scan.TryGetComponent(out SpriteRenderer spriteRenderer))
-                    {
-                        spriteRenderer.enabled = false;
-
-                    }
-                    else if (scan.TryGetComponent(out MeshRenderer MeshRenderer))
-                    {
-                        MeshRenderer.enabled = false;
-
-                    }
-
-                    _getElements = true;
+                  scan.SetActive(false);
                 }
             }
         }
@@ -123,6 +106,16 @@ public class SecondLocatiobScan : MonoBehaviour
         {
             _filler2 = 0.00f;
             _jumpSizer.transform.localScale = new Vector3(0, 0, 0);
+        }
+    }
+
+    private void QEErrorKiller () { 
+        if(Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.Q)){
+            _filler = 0;
+            _filler2 = 0;
+            _jumpSizer.transform.localScale = new Vector3(0, 0, 0);
+            _runSizer.transform.localScale = new Vector3(0, 0, 0);
+
         }
     }
     private void GetScan2ElementsEnebledTrue()
