@@ -1,8 +1,10 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SearchService;
 
 public class JumpComplite : MonoBehaviour
 {
@@ -62,5 +64,9 @@ public class JumpComplite : MonoBehaviour
             _endJumpTL.Play();
         }
     
+    }
+    public void NewCameraPos (CinemachineFreeLook FreeLook)
+    {
+        FreeLook.transform.localPosition = new Vector3(9.63300037f, 2.25200009f, -5.02899981f);
     }
 }
