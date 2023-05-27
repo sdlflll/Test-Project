@@ -16,8 +16,8 @@ public class SecondLocatiobScan : MonoBehaviour
     private bool _getElements;
     private bool _onQ;
     private bool _onE;
-    public bool _getRun;
-    public bool _getJump;
+    public bool getRun;
+    public bool getJump;
     void Start()
     {
 
@@ -62,7 +62,7 @@ public class SecondLocatiobScan : MonoBehaviour
         else if (_filler >= 0.1f)
         {
             _getElements = false;
-            _getRun = true;
+            getRun = true;
             _scan.ScanActive = false;
             _triggerForRunAndJump.SetActive(true);
             if (_getElements == false)
@@ -91,7 +91,7 @@ public class SecondLocatiobScan : MonoBehaviour
         else if (_filler2 >= 0.1f)
         {
             _getElements = false;
-            _getJump = true;
+            getJump = true;
             _triggerForRunAndJump.SetActive(true);
             _scan.ScanActive = false;
             if (_getElements == false)
