@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Light))]
 public class SetLightColorAction : MonoBehaviour
 {
+
     public Color newColor;
     Light light;
 
@@ -17,4 +18,5 @@ public class SetLightColorAction : MonoBehaviour
     {
         light.color = newColor;
     }
+
 }

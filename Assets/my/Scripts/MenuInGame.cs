@@ -41,31 +41,31 @@ public class MenuInGame : MonoBehaviour
     {
         if (menuActivate == true)
         {
+            Cursor.lockState = CursorLockMode.Locked;
             menuActivate = false;
             menuNotActive = true;
-        }
-    }
-    public void ToGameInMenu()
-    {
-        if (menuNotActive == true)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
             Menus.SetActive(false);
             Time.timeScale = 1f;
         }
     }
+  
 
     // Update is called once per frame
     void Update()
     {
         MenuSwitcher();
         ToMenuInGame();
-        ToGameInMenu();
     }
     public void SceneSwitcher(int QuitId)
     {
         menuActivate = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(QuitId);
+    }
+    public void Restart()
+    {
+        menuActivate = false;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

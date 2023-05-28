@@ -67,6 +67,6 @@ public class JumpComplite : MonoBehaviour
     }
     public void NewCameraPos (CinemachineFreeLook FreeLook)
     {
-        FreeLook.transform.localPosition = new Vector3(9.63300037f, 2.25200009f, -5.02899981f);
+        FreeLook.transform.localPosition = new Vector3(2.64413977f, 1.96371794f, -6.82895508f);
     }
 }
